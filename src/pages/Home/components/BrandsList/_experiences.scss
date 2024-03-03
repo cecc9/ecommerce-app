@@ -1,0 +1,85 @@
+@use "../../../../styles/mixins" as *;
+
+.experiences {
+    // background-color: coral;
+
+    &__heading {
+        // background-color: aqua;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 90px;
+        // padding: 20px 0;
+
+        @include mobile-landscape {
+            flex-direction: column;
+            gap: 30px;
+        }
+        @include mobile-portrait {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+    &__subtitle {
+        font-size: 3.5rem;
+        border-right: 3px solid #000;
+        width: 60%;
+
+        @include tablet {
+            font-size: 3rem;
+        }
+
+        @include mobile-landscape {
+            font-size: 2.5rem;
+            border: none;
+            text-align: center;
+        }
+
+        @include mobile-portrait {
+            font-size: 2rem;
+            border: none;
+            text-align: center;
+        }
+    }
+    &__description {
+        font-size: 1.9rem;
+        font-weight: 400;
+        font-style: italic;
+        padding-left: 25px;
+        color: gray;
+
+        @include mobile-landscape {
+            text-align: center;
+            padding: 0;
+        }
+        @include mobile-portrait {
+            text-align: center;
+            padding: 0;
+        }
+    }
+
+    // &__list {
+    //     display: flex;
+    //     gap: 40px;
+    // }
+    // &__item {
+    //     width: 25%;
+    //     list-style: none;
+    // }
+    &__image-item {
+        width: 30px;
+        margin-bottom: 30px;
+    }
+    &__title-item {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    &__description-item {
+        font-size: 1.7rem;
+        color: gray;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow-y: hidden;
+    }
+}

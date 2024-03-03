@@ -1,0 +1,151 @@
+@use "../../styles/mixins" as *;
+
+.cart {
+    &__title {
+        // Estilos para el título del carrito
+        font-size: 2.5rem;
+        color: #1d242d;
+        margin-bottom: 25px;
+    }
+
+    &__list {
+        // Estilos para la lista del carrito
+    }
+
+    &__shopping {
+        width: 100%;
+        padding: 20px;
+
+        display: flex;
+        justify-content: center;
+
+        &-button {
+            background-color: #1d242d;
+            border: none;
+            border-radius: 7px;
+            color: #fff;
+            padding: 20px;
+            font-size: 1.7rem;
+            font-weight: 400;
+            font-family: "Montserrat", sans-serif;
+        }
+    }
+
+    &__item {
+        // Estilos para cada ítem del carrito
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        @include mobile-landscape {
+            flex-wrap: wrap;
+        }
+
+        @include mobile-portrait {
+            flex-wrap: wrap;
+        }
+
+        &-inner {
+            // Estilos para el inner de cada ítem del carrito
+            flex-basis: 450px;
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+
+            @include mobile-landscape {
+                flex-basis: 100%;
+            }
+            @include mobile-portrait {
+                flex-basis: 100%;
+            }
+        }
+
+        &-picture {
+            // Estilos para el contenedor de la imagen
+            display: flex;
+            align-items: center;
+        }
+
+        &-image {
+            // Estilos para la imagen
+            width: 70px;
+        }
+
+        &-details {
+            // Estilos para seccion de detalles del item
+            padding: 10px;
+        }
+
+        &-title {
+            // Estilos para el título del ítem
+            color: #59626d;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        &-price {
+            // Estilos para el precio del item
+            color: #7b7c7d;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        &-quantity {
+            // Estilos para la sección de cantidad del ítem
+            flex-grow: 1;
+            // background-color: cornflowerblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            .cart__quantity-controls {
+                // Estilos para los controles de cantidad del ítem
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .cart__quantity-btn {
+                // Estilos para los botones de cantidad del ítem
+                border: none;
+                background-color: transparent;
+
+                &--add {
+                    // Estilos para el botón de suma de cantidad
+                }
+
+                &--subtract {
+                    // Estilos para el botón de resta de cantidad
+                }
+            }
+            .cart__quantity-value {
+                // Estilos para el valor de cantidad del ítem
+                font-size: 1.8rem;
+            }
+        }
+
+        &-subtotal {
+            // Estilos para el subtotal del ítem
+            flex-grow: 1;
+            // text-align: center;
+            color: #54616e;
+            font-size: 1.9rem;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+
+            span {
+                display: inline-block;
+                width: 100px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__remove-btn {
+        // Estilos para el botón de remover del carrito
+        border: none;
+        background-color: transparent;
+    }
+}

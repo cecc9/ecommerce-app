@@ -1,0 +1,87 @@
+.sidebar {
+    // background-color: sandybrown;
+    width: 85px;
+    height: inherit;
+
+    &__menu {
+        // background-color: rgb(154, 186, 174);
+        background-color: white;
+        width: 85px;
+        height: 100%;
+        transition: width 0.3s ease-in-out;
+        position: relative;
+        z-index: 3;
+        padding: 10px;
+
+        &.active {
+            width: 250px;
+        }
+
+        &-categories {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &.show {
+                align-items: flex-start;
+            }
+
+            .sidebar__menu-toggle {
+                // Clase para el botón del menú
+                margin-bottom: 25px;
+                border: none;
+                border-radius: 5px;
+                background-color: transparent;
+            }
+
+            .sidebar__menu-list {
+                // Clase para la lista de categorías
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .sidebar__menu-item {
+                // Clase para cada elemento de la lista de categorías
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 7px;
+                text-align: center;
+            }
+            .sidebar__menu-item.show {
+                // Clase para cada elemento de la lista de categorías
+                flex-direction: row;
+                gap: 15px;
+
+                .sidebar__menu-label {
+                    // Clase para la etiqueta de texto de cada categoría
+                    font-size: 1.6rem;
+                }
+            }
+
+            .sidebar__menu-checkbox {
+                // Clase para el input checkbox
+                appearance: none;
+                background-color: #35363a;
+                background-image: url("../../assets/check.svg");
+                border: 2px solid #3f4045;
+                border-radius: 5px;
+                transition: background-color 0.3s ease-in-out;
+                width: 25px;
+                height: 25px;
+
+                &:checked {
+                    background-color: #84a8ec;
+                }
+            }
+
+            .sidebar__menu-label {
+                // Clase para la etiqueta de texto de cada categoría
+                font-size: 1.2rem;
+                font-weight: 400;
+                font-style: italic;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.featured-products {
+    width: 100%;
+    margin-top: 50px;
+
+    &__title {
+        /* estilos para el título de la sección de productos destacados */
+        margin-bottom: 20px;
+        font-size: 3.5rem;
+    }
+
+    &__list {
+        /* estilos para la lista de productos */
+        width: 100%;
+    }
+
+    &__item {
+        /* estilos para cada elemento de la lista de productos */
+        display: flex;
+        flex-direction: column;
+    }
+}

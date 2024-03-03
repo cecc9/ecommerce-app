@@ -1,0 +1,80 @@
+@use "../../../../styles/mixins" as *;
+
+.featured-products {
+    &__image-wrapper {
+        /* estilos para el contenedor de la imagen del producto */
+        height: 350px;
+        padding: 30px;
+
+        @include mobile-portrait {
+            height: 200px;
+            padding: 25px;
+        }
+    }
+
+    &__image {
+        /* estilos para la imagen del producto */
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__info {
+        /* estilos para el contenedor de la información del producto */
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    &__details {
+        /* estilos para el contenedor de los detalles del producto, como el título y el precio */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 75%;
+
+        @include mobile-portrait {
+            flex-basis: 140px;
+        }
+    }
+
+    &__product-title {
+        /* estilos para el título del producto */
+        color: #54616e;
+        font-size: 1.9rem;
+        font-weight: 500;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow-y: hidden;
+
+        @include mobile-portrait {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__product-price {
+        /* estilos para el precio del producto */
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #404b5b;
+
+        @include mobile-portrait {
+            font-size: 2rem;
+        }
+    }
+
+    &__action {
+        /* estilos para el contenedor de la acción, como el botón del carrito */
+        background-color: #1d242d;
+        border-radius: 10px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile-portrait {
+            width: 45px;
+        }
+    }
+}

@@ -1,0 +1,240 @@
+@use "../../styles/mixins" as *;
+
+.footer {
+    margin-top: 70px;
+
+    &__content {
+        // estilos para el contenido del footer
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        text-align: center;
+    }
+
+    &__title {
+        // estilos para el título del footer
+        color: #1f242a;
+        font-size: 4rem;
+        font-weight: 700;
+
+        @include mobile-landscape {
+            font-size: 3rem;
+        }
+        @include mobile-portrait {
+            font-size: 2rem;
+        }
+    }
+
+    &__text {
+        // estilos para el texto del footer
+        font-size: 2rem;
+        font-weight: 500;
+        color: #66717f;
+        color: #969ea8;
+
+        @include mobile-landscape {
+            font-size: 1.7rem;
+        }
+        @include mobile-portrait {
+            font-size: 1.5rem;
+        }
+
+        &--two {
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: #969ea8;
+
+            @include mobile-portrait {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &__form {
+        // estilos para el formulario del footer
+        display: flex;
+        justify-content: center;
+        align-items: stretch; // Default
+        height: 60px;
+
+        @include mobile-portrait {
+            flex-direction: column;
+        }
+    }
+
+    &__form-label {
+        // estilos para la etiqueta del formulario del footer
+        border: 1px solid transparent;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+        transition: border-color 0.5s ease-in-out;
+
+        &:focus-within {
+            border: 1px solid black;
+        }
+    }
+
+    &__form-input {
+        // estilos para el input del formulario del footer
+        border: none;
+        color: #66717f;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.8rem;
+        width: 350px;
+        height: 100%;
+        outline: none;
+        padding: 10px;
+
+        &::placeholder {
+            color: #9aa2aa;
+            font-weight: 600;
+
+            @include mobile-portrait {
+                font-size: 1.5rem;
+            }
+        }
+
+        @include mobile-landscape {
+            width: 250px;
+        }
+        @include mobile-portrait {
+            width: 100%;
+        }
+    }
+
+    &__form-button {
+        // estilos para el botón del formulario del footer
+        background-color: #1d242d;
+        border: none;
+        border-radius: 7px;
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.8rem;
+        padding: 15px;
+
+        @include mobile-portrait {
+            font-size: 1.5rem;
+            padding: 7px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        margin-top: 200px;
+        margin-bottom: 50px;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+
+            margin-top: 70px;
+        }
+    }
+
+    // figure
+    &__figure {
+        @include tablet {
+            text-align: center;
+        }
+    }
+    &__figure-image {
+        margin-bottom: 20px;
+    }
+    &__figure-caption {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: #969ea8;
+
+        @include desktop {
+            font-size: 1.6rem;
+        }
+    }
+
+    // menu
+    &__menu {
+        display: flex;
+        gap: 75px;
+
+        @include tablet {
+            gap: 20px;
+        }
+    }
+    // &__menu-item {
+    // }
+    &__menu-title {
+        font-size: 1.9rem;
+        color: #3f4b58;
+        margin-bottom: 20px;
+
+        @include desktop {
+            font-size: 1.7rem;
+        }
+
+        @include mobile-portrait {
+            font-size: 1.5rem;
+        }
+    }
+    &__list {
+        list-style: none;
+    }
+    &__item {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: #969ea8;
+        margin-bottom: 12px;
+
+        @include desktop {
+            font-size: 1.6rem;
+        }
+
+        @include mobile-portrait {
+            font-size: 1.2rem;
+        }
+    }
+
+    // payment methods
+    .payment {
+        @include tablet {
+            text-align: center;
+        }
+
+        &__title {
+            text-transform: uppercase;
+            font-size: 1.9rem;
+            color: #3f4b58;
+            margin-bottom: 20px;
+
+            @include desktop {
+                font-size: 1.7rem;
+            }
+        }
+        &__list-methods {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        color: #969ea8;
+        font-size: 1.9rem;
+        font-weight: 500;
+
+        padding: 30px 0;
+        border-top: 1px solid #969ea8;
+
+        @include mobile-portrait {
+            padding: 20px 0;
+            font-size: 1.5rem;
+        }
+    }
+}

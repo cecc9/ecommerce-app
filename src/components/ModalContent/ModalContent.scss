@@ -1,0 +1,126 @@
+@use "../../styles/mixins" as *;
+
+.modal {
+    // Estilos para el bloque modal
+    display: grid;
+    grid-template-columns: 300px auto;
+    height: 100%;
+
+    @include tablet {
+        grid-template-columns: auto;
+        grid-template-rows: 300px auto;
+    }
+
+    &__figure {
+        // Estilos para el elemento figure dentro del bloque modal
+        padding: 20px;
+        height: 380px;
+
+        @include tablet {
+            height: 300px;
+        }
+    }
+
+    &__image {
+        // Estilos para la imagen dentro del bloque modal
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__section {
+        // Estilos para el elemento section dentro del bloque modal
+        // background-color: yellowgreen;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        // Estilos para el título dentro del bloque modal
+        color: #54616e;
+        font-size: 2.5rem;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow-y: hidden;
+    }
+
+    &__description {
+        // Estilos para la descripción dentro del bloque modal
+        color: #54616e;
+        font-size: 1.7rem;
+        font-weight: 300;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow-y: hidden;
+    }
+
+    &__category {
+        // Estilos para la categoría dentro del bloque modal
+        color: #404b5b;
+        font-size: 1.4rem;
+        font-style: italic;
+        font-weight: 600;
+    }
+
+    &__price {
+        // Estilos para el precio dentro del bloque modal
+        color: #404b5b;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    &__add-to-cart {
+        // Estilos para el botón "Add to Cart" dentro del bloque modal
+        background-color: #1d242d;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 8px 15px;
+
+        &:disabled {
+            background-color: #b8b9bc;
+        }
+
+        @include tablet {
+            align-self: center;
+        }
+
+        &-label {
+            // Estilos para la etiqueta del botón "Add to Cart" dentro del bloque modal
+            color: #fff;
+            font-size: 1.5rem;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+        }
+    }
+
+    &__close {
+        // Estilos para el botón de cerrar dentro del bloque modal
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+        padding: 7px;
+        background-color: transparent;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

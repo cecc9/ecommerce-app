@@ -1,0 +1,33 @@
+@use "../../../styles/mixins" as *;
+
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+
+    @include tablet {
+        border: 1px solid #acb1b8;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+    &__icon {
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+    }
+
+    &__icon-svg {
+        display: inline-block;
+        fill: #acb1b8;
+    }
+
+    &__input {
+        height: 40px;
+        font-size: 1.7rem;
+        font-family: "Montserrat", sans-serif;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+}

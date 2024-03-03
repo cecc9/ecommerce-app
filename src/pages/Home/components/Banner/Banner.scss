@@ -1,0 +1,73 @@
+@use '../../../../styles/mixins' as *;
+
+.banner {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+
+    &__picture {
+        position: absolute;
+        display: block;
+        width: inherit;
+        height: inherit;
+    }
+    &__image {
+        object-fit: cover;
+        width: inherit;
+        height: inherit;
+        border-radius: 20px;
+    }
+
+    &__content {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 20px;
+        width: inherit;
+        height: inherit;
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        gap: 80px;
+        padding: 30px;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 10rem;
+        text-align: center;
+
+        @include tablet {
+            font-size: 9rem;
+        }
+
+        @include mobile-landscape {
+            font-size: 7rem;
+        }
+
+        @include mobile-portrait {
+            font-size: 5rem;
+        }
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 2.2rem;
+        font-weight: 500;
+        font-family: 'Montserrat', sans-serif;
+        border-radius: 10px;
+        border: none;
+        padding: 20px;
+        cursor: pointer;
+
+        @include mobile-landscape {
+            font-size: 2rem;
+        }
+
+        @include mobile-portrait {
+            padding: 15px;
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+    }
+}

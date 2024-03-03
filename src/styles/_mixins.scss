@@ -1,0 +1,28 @@
+// Mixin para dispositivos móviles en formato vertical
+@mixin mobile-portrait {
+    @media only screen and (max-width: 568px) {
+        @content;
+    }
+}
+
+// Mixin para dispositivos móviles en formato horizontal
+@mixin mobile-landscape {
+    @media only screen and (min-width: 568px) and (max-width: 836px) {
+        @content;
+    }
+}
+
+// Mixin para tablets
+@mixin tablet {
+    // @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+// Mixin para ordenadores de escritorio y portátiles
+@mixin desktop {
+    @media only screen and (max-width: 1310px) {
+        @content;
+    }
+}

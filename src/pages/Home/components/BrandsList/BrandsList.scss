@@ -1,0 +1,32 @@
+.brandslist {
+    margin-top: 50px;
+
+    &__title {
+        font-size: 4rem;
+        margin-bottom: 65px;
+    }
+    &__list {
+        margin-bottom: 70px;
+    }
+
+    .swiper-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        width: 80px;
+        display: flex;
+        justify-content: center;
+
+        &:first-child .brandslist__image {
+            width: 100px;
+        }
+    }
+
+    &__image {
+        width: 80px;
+    }
+}
+
+@import "./experiences";
